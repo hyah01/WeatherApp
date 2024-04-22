@@ -1,0 +1,33 @@
+{
+  "data": {
+    "time": "2024-04-21T22:44:00Z",
+    "values": {
+      "cloudBase": 0.45,
+      "cloudCeiling": 0.45,
+      "cloudCover": 65,
+      "dewPoint": 55.74,
+      "freezingRainIntensity": 0,
+      "humidity": 69,
+      "precipitationProbability": 0,
+      "pressureSurfaceLevel": 29.79,
+      "rainIntensity": 0,
+      "sleetIntensity": 0,
+      "snowIntensity": 0,
+      "temperature": 65.97,
+      "temperatureApparent": 65.97,
+      "uvHealthConcern": 1,
+      "uvIndex": 3,
+      "visibility": 9.94,
+      "weatherCode": 1102,
+      "windDirection": 248.5,
+      "windGust": 15.66,
+      "windSpeed": 8.25
+    }
+  },
+  "location": {
+    "lat": 32.7174186706543,
+    "lon": -117.16277313232422,
+    "name": "San Diego, San Diego County, California, United States",
+    "type": "administrative"
+  }
+}

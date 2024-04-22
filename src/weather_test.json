@@ -572,7 +572,7 @@
           "visibilityAvg": 15,
           "visibilityMax": 15,
           "visibilityMin": 15,
-          "weatherCodeMax": 1000,
+          "weatherCodeMax": 8000,
           "weatherCodeMin": 1000,
           "windDirectionAvg": 271.76,
           "windGustAvg": 8.47,
