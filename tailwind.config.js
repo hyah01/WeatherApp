@@ -13,6 +13,7 @@ module.exports = {
       backgroundImage: {
         "hero": "url('/bg_1.jpg')",
       },
+      
     },
   },
   plugins: [],
