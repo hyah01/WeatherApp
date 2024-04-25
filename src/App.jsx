@@ -5,7 +5,7 @@ import rtWeatherData from './current_weather_test.json';
 import DayForeCast from "./components/DayForeCast";
 import DataName from "./components/DataName";
 import HourlyForeCast from "./components/HourlyForeCast";
-
+import Search from "./components/Search";
 
 
 
@@ -54,7 +54,7 @@ function App() {
       const result = await axios.request(options)
       setData(result.data.location);
       setDaily(result.data.timelines.daily);
-      Sethourly(result.data.timelines.hourly);
+      sethourly(result.data.timelines.hourly);
       console.log(result.data.timelines.daily);
 
     } catch(error){
@@ -64,21 +64,22 @@ function App() {
 
 
   return (
-    <main className="h-screen">
-      <div className="bg-hero bg-cover bg-no-repeat bg-center h-full">
-        <h1 className="text-9xl font-extrabold text-gray-900 leading-tight mb-2 pb-4 relative text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">
+    <main className="h-screen w-screen">
+      <div className="bg-hero bg-cover bg-no-repeat bg-center h-100vh w-100vh">
+        <h1 className="text-[5rem] sm:text-9xl font-extrabold text-gray-900 leading-tight mb-2 pb-4 relative text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.5)]">
           <span className="bg-clip-text text-transparent bg-gradient-to-r to-pink-200 from-sky-200">Weather Forecast</span>
-          <span className="absolute inset-0 mx-auto my-auto top-[170px] w-[70rem] h-3 bg-gradient-to-r from-sky-200 to-pink-200"></span>
+          <span id="bar" className="absolute inset-0 mx-auto my-auto top-[170px] w-[70rem] h-3 bg-gradient-to-r from-sky-200 to-pink-200"></span>
         </h1>
         <div className="flex flex-col justify-center items-center">
           <p className="mt-10 text-[30px]">Enter Location or ZipCode (with 2-letter code based on <a className="underline" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#US" target="_blank">ISO-3166</a>)</p>
-          <input className="my-5 h-10 w-[500px]" type="text" id="location" name='location'onChange={(e) => setText(e.target.value)}/>
-            <button className="bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-2 px-4 rounded-full" id="post" onClick={onPress}> Submit</button>         
+          <input className=" w-auto h-[42px] leading-[30px] outline-none border-none font-[2rem] rounded-[20px] py-0 px-[20px] m-4 " type="text" id="location" name='location' placeholder="Type Here" onChange={(e) => setText(e.target.value)}/>
+          <button className="bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-2 px-4 rounded-full" id="post" onClick={onPress}> Submit</button>         
         </div>
         <DataName data={data}/>
-        <HourlyForeCast hourly={hourly}/>
+        <div className="sm:w-[60%]  m-auto">
+          <HourlyForeCast hourly={hourly}/>
+        </div>
         <DayForeCast daily={daily}/>
-
           
       </div>
     </main>

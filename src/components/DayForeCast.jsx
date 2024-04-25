@@ -14,7 +14,7 @@ const DayForeCast = (props) => {
     'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
     ];
     return (
-        <div className={`${props.daily ? "container mx-auto mt-10 flex justify-between isolate rounded-xl bg-white/10 shadow-lg ring-1 ring-black/5 px-[5rem] py-10 backdrop-blur-lg" : " "} `}>
+        <div className={`${props.daily ? "container mx-auto mt-10 flex justify-between isolate rounded-xl bg-white/10 shadow-lg ring-1 ring-black/5 px-[5rem] py-10 backdrop-blur-lg overflow-auto" : "hidden"} `}>
             {
             props.daily && props.daily.map(post => {
               return (

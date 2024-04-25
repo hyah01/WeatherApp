@@ -6,3 +6,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@media (max-width: 1120px){
+
+    #bar{
+    width: 35rem;
+    margin-bottom: 0;
+    }
+
+}
+@media (max-width: 640px){
+
+    #bar{
+    width: 20rem;
+    margin-bottom: 0;
+    }
+
+}
