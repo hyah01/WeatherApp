@@ -22,6 +22,7 @@ import {
     IcePelletsHeavy,
     IcePelletsLight,
     LightningStorm,
+    PowerByTomorrow
 } from '../assets';
 
 export const WeatherImgs = {
@@ -49,4 +50,5 @@ export const WeatherImgs = {
         "7101": IcePelletsHeavy,
         "7102": IcePelletsLight,
         "8000": LightningStorm,
+        "Credit" : PowerByTomorrow,
 };

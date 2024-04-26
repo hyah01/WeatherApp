@@ -21,6 +21,7 @@ import IcePellets from './WeatherIcons/7000_ice_pellets.png';
 import IcePelletsHeavy from './WeatherIcons/7101_ice_pellets_heavy.png';
 import IcePelletsLight from './WeatherIcons/7102_ice_pellets_light.png';
 import LightningStorm from './WeatherIcons/8000_tstorm.png';
+import PowerByTomorrow from './WeatherIcons/Powered_by_Tomorrow-White.svg';
 
 export {
     ClearSunny,
@@ -46,5 +47,6 @@ export {
     IcePelletsHeavy,
     IcePelletsLight,
     LightningStorm,
+    PowerByTomorrow
 
 };

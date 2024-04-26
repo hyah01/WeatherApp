@@ -7,11 +7,14 @@ const DataName = (props) => {
             {
               props.data && [props.data].map(post => {
                 return(
-                  <div>
+                  <div key="locationName">
                     <h1>{post.name.split(",")[0]}</h1>
                   </div>
                 )
             })}
+            <div>
+              
+            </div>
         </div>
     )
 }

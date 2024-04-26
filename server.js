@@ -27,20 +27,42 @@ app.get('/', (req,res)=>{
     
     const API = process.env.REACT_PUBLIC_API_KEY;
     const location = req.headers.location.replace(" ", "%20");
+    
 
     const options = {
         method: 'GET',
-        url: `https://api.tomorrow.io/v4/weather/forecast?location=${location}&timesteps=1h%2C1d&units=imperial&apikey=${API}`,
-        //url: `https://swapi.dev/api/people/${location}/`,
+        url: `https://api.tomorrow.io/v4/weather/realtime?location=${location}&units=imperial&apikey=${API}`,
+        //url: `https://swapi.py4e.com/api/people/1/`,
         headers: {
             accept: 'application/json'
         }
-   };
+    };
+    const options2 = {
+        method: 'GET',
+        url: `https://api.tomorrow.io/v4/weather/forecast?location=${location}&timesteps=1h%2C1d&units=imperial&apikey=${API}`,
+        //url: `https://swapi.py4e.com/api/people/2/`,
+        headers: {
+            accept: 'application/json'
+        }
+    };
    
-    axios.request(options).then(function (response) {
+    // axios.all([
+    //     axios.request(options),
+    //     axios.request(options2)
+    // ]).then(axios.spread((data1,data2) => 
+    //     res.json({
+    //         data1: data1.data,
+    //         data2: data2.data
+    //     })
+    // )).catch(function (error) {
+    //     console.error(error);
+    // });
+
+    axios.request(options2).then(function (response) {
         res.json(response.data);
     }).catch(function (error) {
         console.error(error);
     });
+
 }
 )
