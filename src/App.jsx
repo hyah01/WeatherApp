@@ -46,7 +46,7 @@ function App() {
     e.preventDefault();
     try {
 
-      const API = process.env.REACT_PUBLIC_API_KEY;
+      const API = process.env.NEXT_PUBLIC_API_KEY;
       const location = text
 
       const options2 = {

@@ -25,7 +25,7 @@ app.listen(5000, ()=> console.log(`Server is running on ${port}` ))
 // API request
 app.get('/api', (req,res)=>{    
     
-    const API = process.env.REACT_PUBLIC_API_KEY;
+    const API = process.env.NEXT_PUBLIC_API_KEY;
     const location = req.headers.location;
     
 
