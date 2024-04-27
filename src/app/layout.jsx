@@ -1,8 +1,8 @@
 import './global.css'
 
 export const metadata = {
-    title: 'React App',
-    description: 'Web site created with Next.js.',
+    title: 'Weather Forecast ',
+    description: 'Web site for 24 hours forecast and 7 days forecast',
   }
    
   export default function RootLayout({ children }) {
