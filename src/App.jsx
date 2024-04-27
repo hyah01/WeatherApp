@@ -57,12 +57,8 @@ function App() {
         }
     };
 
-      const result = await axios.request(options2).then(function (response) {
-        res.json(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });;
-    
+      const result = await axios.request(options2)
+
       setRtData(result.data.timelines.hourly)
       setData(result.data.location);
       setDaily(result.data.timelines.daily);
