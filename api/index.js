@@ -23,7 +23,7 @@ app.listen(5000, ()=> console.log(`Server is running on ${port}` ))
 //       .catch(err => console.error(err));
 
 // API request
-app.get('/api', (req,res)=>{    
+app.get('/', (req,res)=>{    
     
     const API = process.env.REACT_PUBLIC_API_KEY;
     const location = req.headers.location.replace(" ", "%20");
