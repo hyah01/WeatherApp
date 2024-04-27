@@ -46,16 +46,23 @@ function App() {
     e.preventDefault();
     try {
 
-      const options = {
-        method: 'GET',
-        //url: "http://localhost:5000",
-        url: "https://weatherapp-bice-alpha.vercel.app/api",
-        headers: {
-          location: text
-        },
-      }
+      const API = process.env.REACT_PUBLIC_API_KEY;
+      const location = text
 
-      const result = await axios.request(options);
+      const options2 = {
+        method: 'GET',
+        url: `https://api.tomorrow.io/v4/weather/forecast?location=${location}&timesteps=1h%2C1d&units=imperial&apikey=${API}`,
+        headers: {
+            accept: 'application/json'
+        }
+    };
+
+      const result = await axios.request(options2).then(function (response) {
+        res.json(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });;
+    
       setRtData(result.data.timelines.hourly)
       setData(result.data.location);
       setDaily(result.data.timelines.daily);
