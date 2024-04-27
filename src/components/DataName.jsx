@@ -8,7 +8,7 @@ const DataName = (props) => {
               props.data && [props.data].map(post => {
                 return(
                   <div key="locationName">
-                    <h1>{post.name.split(",")[0]}</h1>
+                    <h1>{(post.type === 'administrative') ? post.name.split(",")[0] : post.name.split(",")[1]}</h1>
                   </div>
                 )
             })}
