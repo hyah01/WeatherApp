@@ -48,7 +48,8 @@ function App() {
 
       const options = {
         method: 'GET',
-        url: "http://localhost:5000",
+        //url: "http://localhost:5000",
+        url: "https://weatherapp-bice-alpha.vercel.app/api/index",
         headers: {
           location: text
         },
