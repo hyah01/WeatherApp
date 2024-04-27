@@ -74,6 +74,8 @@ function App() {
     }
   }
 
+  
+
 
   return (
     <main className="">
@@ -89,8 +91,10 @@ function App() {
           <p className="text-[15px]">This is using Tomorrow.io's free API so it will only be able to call the API <span className="font-bold">20</span> times every hour ( Incase it doesn't work use the example API <span 
              className=" underline hover:cursor-pointer" onClick={onPress}>here</span> )
           </p>
-          <input className=" w-auto h-[42px] leading-[30px] outline-none border-none font-[2rem] rounded-[20px] py-0 px-[20px] m-4 " type="text" id="location" name='location' placeholder="Type Here" onChange={(e) => setText(e.target.value)}/>
-          <button className="bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-2 px-4 rounded-full" id="post" onClick={handleClick}> Submit</button>         
+          <form onSubmit={handleClick} className="flex flex-col justify-center items-center">
+            <input className=" w-auto h-[42px] leading-[30px] outline-none border-none font-[2rem] rounded-[20px] py-0 px-[20px] m-4 " type="text" id="myInput" name='location' placeholder="Type Here" onChange={(e) => setText(e.target.value)}/>
+            <button className="bg-blue-500 hover:bg-white text-white hover:text-blue-500 font-bold py-2 px-4 rounded-full" id="post" type="submit"> Submit</button>    
+          </form>     
         </div>
         <DataName data={data}/>
         <RtForeCast rtData={rtData}/>
