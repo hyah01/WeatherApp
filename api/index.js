@@ -26,9 +26,7 @@ app.listen(5000, ()=> console.log(`Server is running on ${port}` ))
 app.get('/api', (req,res)=>{    
     
     const API = process.env.REACT_PUBLIC_API_KEY;
-    const location = '';
-    if (res.headers.location){
-        req.headers.location.replace(" ", "%20");
+    const location = req.headers.location;
     
 
     const options = {
@@ -65,9 +63,6 @@ app.get('/api', (req,res)=>{
     }).catch(function (error) {
         console.error(error);
     });
-    } else {
-        return res.send("TEST");
-    }
 
 }
 )
